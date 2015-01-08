@@ -1,6 +1,6 @@
 {
   "name": "lmn.jester.theme.making",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Making theme for Jester",
   "author": "thampsen",
   "main": "src/scss/_jester.theme.making.scss",
