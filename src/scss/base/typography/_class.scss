@@ -1,0 +1,286 @@
+@import "colors";
+
+@mixin heading-spacing($x) {
+  line-height: rem($x);
+  margin-bottom: rem($x / 2);
+}
+
+
+.font-sans-serif {
+  font-family: "adelle-sans", sans-serif;
+}
+
+.font-serif {
+  font-family: "freight-text-pro", serif;
+}
+
+
+
+// Base sizing
+// ===========
+
+// (1) A random number that has been found to
+//     result in more pixel perfect down-sizing
+
+.base-font {
+  font-size: $font-size-base;
+  @include on("sm") {
+    font-size: 14.8px;
+  }
+
+}
+
+.html {
+  @extend .base-font;
+}
+
+// Base styling
+// ============
+
+.body {
+  @extend .base-font;
+  @extend .font-sans-serif;
+  line-height: 1.5;
+  color: $color-text;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.article {
+  margin-bottom: $md;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Links
+// =====
+
+.a {
+  text-decoration: none;
+  color: $color-text-link;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Paragraphs
+// ==========
+
+.p {
+  @extend .font-serif;
+  font-size: em(20);
+  §height: 1.5;
+  margin-top: 0;
+  margin-bottom: $md;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  &.small {
+    font-size: em(16);
+  }
+}
+
+.font-sans-serif>p, .font-sans-serif>.p {
+  @extend .font-sans-serif;
+} 
+
+// Editorial list styles
+
+.p-li {
+  margin-bottom: $md;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+.italic {
+  @extend .font-serif;
+  font-style: italic;
+}
+
+// Align icons in text
+
+.icon {
+  vertical-align: top;
+}
+
+
+
+.text-md {
+  font-size: 20px;
+}
+
+
+// Headings
+// ========
+
+
+.heading {
+  @extend .font-sans-serif;
+  font-weight: bold;
+}
+
+.h1 {
+  @extend .heading;
+  @include heading-spacing(60);
+  font-size: em(66);
+  &.huge {
+    @include heading-spacing(66);
+    font-size: em(60);
+  }
+  @include on("sm") {
+    font-size: em(36);
+    line-height: rem(40);
+  }
+}
+
+.h2 {
+  @extend .heading;
+  @include heading-spacing(53);
+  font-size: em(48);
+  @include on("md") {
+    font-size: em(30);
+    line-height: rem(33);
+  }
+}
+
+.h3 {
+  @extend .heading;
+  @include heading-spacing(40);
+  font-size: em(36);
+}
+
+.h4 {
+  @extend .heading;
+  @include heading-spacing(33);
+  font-size: em(30);
+}
+
+.h5 {
+  @extend .heading;
+  @include heading-spacing(26);
+  font-size: em(24);
+}
+
+.h6 {
+  @extend .heading;
+  @include heading-spacing(22);
+  font-size: em(20);
+}
+
+
+
+// Custom headings
+// ===============
+
+.heading-dashed {
+  margin-bottom: rem(32);
+  padding-bottom: rem(24);
+  text-align: center;
+  border-style: dashed;
+  border-width: 0px 0px 2px 0px;
+  border-color: $color-bg-gray-brown;
+  color: $color-bg-red;
+  p + & {
+    margin-top: $md * 2;
+  }
+}
+
+.heading-brushed {
+  @include heading-spacing(26);
+  margin-bottom: rem(38);
+  padding-bottom: rem(16);
+  text-align: center;
+  background-image: image-url("dividers/dashed-line-133x2.svg");
+  background-repeat: no-repeat;
+  border: none;
+  background-position: bottom;
+  background-size: 130px 2px;
+  @extend .font-serif;
+  font-size: em(24);
+  font-weight: normal;
+  color: $color-text-disabled;
+  p + & {
+    margin-top: $md * 2;
+  }
+}
+
+// Sub heading
+// ===============
+
+.subheading {
+  @extend .p;
+}
+
+// Quotations
+// ========
+
+.blockquote {
+  @extend .italic;
+  font-size: em(30);
+  line-height: rem(38);
+  margin: rem(20) 0;
+  text-align: center;
+}
+
+
+
+// Captions (below images etc.)
+// ========
+
+.figure {
+  margin: 0;
+  text-align: center;
+}
+
+.figcaption {
+  margin: $sm 0 $md;
+  font-size: em(14);
+  color: $color-text-light;
+  text-align: center;
+}
+
+// Formatted text blocks
+// =====================
+
+.pre {
+  width: 100%;
+  display: block;
+  font-family: "adelle-sans";
+  white-space: pre-wrap;
+  font-style: italic;
+}
+
+
+// Dropcap
+// =====================
+
+
+.dropcap {
+  float: left;
+  @extend .h1;
+  margin-right: 10px;
+  margin-bottom: 0;
+  line-height: 0.9;
+}
+
+
+
+// Other custom stuff
+// ==================
+
+.text-indented {
+  display: block;
+  padding-left: $md + rem(5);
+  border-left: rem(5) solid $color-bg-orange;
+  color: $color-bg-orange;
+  margin-bottom: $md;
+}
+
+

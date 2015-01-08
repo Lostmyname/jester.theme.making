@@ -1,0 +1,192 @@
+@import "colors";
+//@import "class";
+
+@mixin heading-spacing($x) {
+  line-height: rem($x);
+  margin-bottom: rem($x / 2);
+}
+
+.font-sans-serif {
+  @extend .font-sans-serif;
+}
+
+.font-serif {
+  @extend .font-serif;
+}
+
+
+// Base sizing
+// ===========
+
+// (1) A random number that has been found to
+//     result in more pixel perfect down-sizing
+
+html {
+  @extend .html;
+}
+
+// Base styling
+// ============
+
+body {
+  @extend .body;
+}
+
+
+article {
+  @extend .article;
+}
+
+// Links
+// =====
+
+a {
+  @extend .a;
+}
+
+// Paragraphs
+// ==========
+
+.text-md {
+  @extend .text-md;
+}
+
+p,
+.p, {
+  @extend .p;
+}
+
+
+.font-sans-serif>p, .font-sans-serif>.p {
+  @extend .font-sans-serif;
+} 
+
+// Editorial list styles
+
+.p li {
+  @extend .p-li;
+}
+
+
+.italic {
+  @extend .italic;
+}
+
+// Align icons in text
+
+.icon {
+  @extend .icon;
+}
+
+// Headings
+// ========
+
+// Reset styles
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+
+
+// Heading classes
+// ========
+
+.heading {
+  @extend .heading;
+}
+
+.h1 {
+  @extend .h1;
+}
+
+.h2 {
+  @extend .h2;
+}
+
+.h3 {
+  @extend .h3;
+}
+
+.h4 {
+  @extend .h4;
+}
+
+.h5 {
+  @extend .h5;
+}
+
+.h6 {
+  @extend .h6;
+}
+
+
+
+// Custom headings
+// ===============
+
+.heading-dashed {
+  @extend .heading-dashed;
+}
+
+.heading-brushed {
+  @extend .heading-brushed;
+}
+
+// Sub heading
+// ===============
+
+.subheading {
+  @extend .subheading;
+}
+
+// Quotations
+// ========
+
+
+
+blockquote,
+blockquote p {
+  @extend .blockquote;
+}
+
+// Captions (below images etc.)
+// ========
+
+figure {
+  @extend .figure;
+}
+
+figcaption {
+  @extend .figcaption;
+}
+
+// Formatted text blocks
+// =====================
+
+pre {
+  @extend .pre;
+}
+
+
+// Dropcap
+// =====================
+
+
+.dropcap {
+  @extend .dropcap;
+}
+
+
+
+// Other custom stuff
+// ==================
+
+.text-indented {
+  @extend .text-indented;
+}
+
+
+

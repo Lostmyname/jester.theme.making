@@ -1,0 +1,24 @@
+.swiper-container {
+  /* Specify Swiper's Size: */
+  width: 100%;
+}
+
+.swiper-slide {
+  /* Specify Slides's Size: */
+  width: 50%;
+}
+
+.swiper-pagination-switch {
+  background-color: $color-bg-gray;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.swiper-active-switch {
+  background-color: $color-bg-primary; 
+}

@@ -1,0 +1,48 @@
+// This class is only to be added by JS
+// The visual logic depends on JS state classes being applied
+// If JS fails the form will fallback to basic layout
+
+.labels-infield
+  display: block
+  position: relative
+
+  label
+    position: absolute
+    z-index: 1
+    top: 0
+    left: $sm + rem(2) // add border size
+    line-height: $height-form-control
+    margin: 0
+    font-size: em(14)
+    font-weight: normal
+    color: #555
+    cursor: text
+
+    &:after
+      content: ':'
+
+  input::placeholder
+    color: white // hide it
+
+  &.input-is-focused label,
+  &.input-is-dirty label
+    top: -$sm/2
+    line-height: $sm
+    left: auto
+    right: $sm
+    //left: $sm - rem(2) // don't reduce all the left padding as letter-spacing is smaller than in input
+    padding: 0 rem(4)
+    background: white
+    font-size: em(12)
+
+    &:after
+      content: ''
+
+  &.input-is-focused label
+    color: darken($color-bg-secondary, 7)
+
+  &.input-is-valid label
+    color: darken($color-bg-primary, 7)
+
+  &.input-is-invalid.input-is-filled label
+    color: darken($color-bg-alert, 7)

@@ -1,0 +1,31 @@
+.button {
+  @include button($color-bg-neutral, $color-text);
+}
+
+.button.primary {
+  @include button($color-bg-primary, white);
+}
+
+.button.secondary {
+  @include button($color-bg-secondary, white);
+}
+
+.button.alert {
+  @include button($color-bg-alert, white);
+}
+
+.button.inverted {
+  @include button(white, $color-text);
+}
+
+.button-share-facebook {
+  @extend .bg-facebook !optional;
+}
+
+.button-share-twitter {
+  @extend .bg-twitter !optional;
+}
+
+.button-share-email {
+  @extend .bg-email !optional;
+}

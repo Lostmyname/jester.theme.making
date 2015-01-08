@@ -1,0 +1,93 @@
+@import "class";
+
+$height-form-control: rem(40);
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+.input {
+  @extend .input;
+}
+
+select {
+  @extend .select;
+}
+
+textarea {
+  @extend .textarea;
+}
+
+
+.textarea-counter {
+  @extend .textarea-counter;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+.input {
+  @extend .input-field;
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+.input {
+  @extend .field-validate;
+}
+
+.control-group {
+  @extend .control-group;
+}
+
+// default stacked form layout
+.control-group label,
+legend,
+.control-label {
+  @extend .stacked-layout;
+}
+
+.controls-inline {
+  @extend .controls-inline;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  @extend .radio;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select,
+.input {
+  @extend .full-width;
+
+  &.tiny {
+    width: rem(100);
+  }
+
+  &.small {
+    width: rem(140);
+  }
+
+  &.medium {
+    width: rem(180);
+  }
+}
+
+select {
+  @extend .select;
+}
+
+.control-groups-spaced-small {
+  @extend .control-groups-spaced-small;
+}
+
+.error {
+  @extend .error;
+}

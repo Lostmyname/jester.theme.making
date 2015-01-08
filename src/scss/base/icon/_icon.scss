@@ -1,0 +1,30 @@
+@import "glyphs";
+$icon-font-family: 'LMN-icons';
+
+
+@font-face {
+  font-family: $icon-font-family;
+  src: url('../fonts/LMN-icons.eot');
+  src: url('../fonts/LMN-icons.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/LMN-icons.woff') format('woff'),
+       url('../fonts/LMN-icons.ttf') format('truetype'),
+       url('../fonts/LMN-icons.svg#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  width: 1em;
+  font-family: $icon-font-family;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  & + .label {
+    margin-left: rem(4);
+  }
+}

@@ -1,0 +1,43 @@
+.ol {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  > li {
+    @extend .clearfix !optional;
+    @extend .m-b-md !optional;
+    @extend .font-serif !optional;
+    @extend .text-md !optional;
+    list-style-position:inside;
+    position: relative;
+
+    > .ol-number {
+      @extend .font-sans-serif !optional;
+      @extend .text-md !optional;
+      @extend .bg-alert !optional;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 34px;
+      height: 34px;
+      line-height: 30px;
+      text-align: center;
+
+      -webkit-border-radius: 17px;
+      -moz-border-radius: 17px;
+      border-radius: 17px;
+    }
+
+    > .ol-content {
+      display: block;
+      margin-left: 44px;
+    }
+  }
+}
+
+
+
+ol {
+  @extend .ol;
+}

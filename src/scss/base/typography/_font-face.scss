@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "adelle-sans";
+  src: asset-url("adellesansbasic-regular-webfont.eot");
+  src: asset-url("adellesansbasic-regular-webfont.eot?#iefix") format("embedded-opentype"), asset-url("adellesansbasic-regular-webfont.woff") format("woff"), asset-url("adellesansbasic-regular-webfont.ttf") format("truetype"), asset-url("adellesansbasic-regular-webfont.svg#adelle-sans") format("svg");
+}
+
+
+@font-face {
+  font-family: "adelle-sans";
+  font-weight: bold;
+  src: asset-url("adellesansbasic-bold-webfont.eot");
+  src: asset-url("adellesansbasic-bold-webfont.eot?#iefix") format("embedded-opentype"), asset-url("adellesansbasic-bold-webfont.woff") format("woff"), asset-url("adellesansbasic-bold-webfont.ttf") format("truetype"), asset-url("adellesansbasic-bold-webfont.svg#adelle-sans") format("svg");
+}

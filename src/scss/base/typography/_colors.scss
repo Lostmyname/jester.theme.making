@@ -1,0 +1,36 @@
+.color-default,
+.links-color-default a {
+  color: $color-text;
+}
+
+.color-primary,
+.links-color-primary a {
+  color: $color-text-primary;
+}
+
+.color-secondary,
+.links-color-secondary a {
+  color: $color-text-secondary;
+}
+
+.color-alert,
+.links-color-alert a {
+  color: $color-text-alert;
+}
+
+.color-inverted,
+.links-color-inverted a {
+  color: white;
+}
+
+.color-facebook {
+  color: $color-facebook;
+}
+
+.color-twitter {
+  color: $color-twitter;
+}
+
+.color-google {
+  color: $color-google;
+}

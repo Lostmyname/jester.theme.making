@@ -1,0 +1,36 @@
+.divider-thin {
+  background-color: transparent;
+  background-image: url(../images/dividers/dashed-line-133x2.svg);
+  background-repeat: repeat-x;
+}
+  
+.divider-thick {
+  background-color: transparent;
+  background-image: url(../images/dividers/brush-white-thin-large.png);
+
+  @include on("retina") {
+    background-image: url(../images/dividers/brush-white-thin-xlarge.png);
+    background-size: auto 10px;
+  }
+}
+
+
+.divider-texture-top {
+  height: 7px;
+  background-image: url(../images/dividers/texture-top-large.png);
+  background-repeat: repeat-x;
+  @include on("retina") {
+    background-image: url(../images/dividers/texture-top-xlarge.png);
+    background-size: auto 7px;
+  }
+}
+
+.divider-texture-bottom {
+  height: 15px;
+  background-image: url(../images/dividers/texture-bottom-large.png);
+  background-repeat: repeat-x;
+  @include on("retina") {
+    background-image: url(image-path("../images/dividers/texture-bottom-xlarge.png"));
+    background-size: auto 15px;
+  }
+}

@@ -1,0 +1,161 @@
+$height-form-control: rem(40);
+
+
+.input {
+  height: $height-form-control;
+  padding: 0 $sm;
+}
+
+.select {
+  height: $height-form-control;
+  padding: $sm;
+}
+
+.textarea {
+  padding: $sm;
+}
+
+
+
+.textarea-counter {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 8px 12px;
+  text-align: right;
+  font-family: monospace;
+  letter-spacing: -1px;
+  color: $color-text-link;
+  pointer-events: none;
+  &.is-negative {
+    color: red;
+  }
+  textarea.no-highlight ~ & {
+    color: $color-text-light;
+  }
+}
+
+
+.input-field {
+  max-width: 100%;
+  background: white;
+  border: rem(2) solid $color-bg-neutral;
+  border-radius: rem(3);
+  outline: none;
+  font-family: sans-serif;
+  font-size: em(15);
+
+  @extend .full-width;
+
+  &.tiny {
+    width: rem(100);
+  }
+
+  &.small {
+    width: rem(140);
+  }
+
+  &.medium {
+    width: rem(180);
+  }
+
+  &:focus {
+    border-color: $color-bg-secondary;
+  }
+  &.is-valid {
+    border-color: $color-bg-primary;
+  }
+  &.is-filled.is-invalid {
+    border-color: $color-bg-alert;
+  }
+  &.no-highlight,
+  .no-highlight & {
+    border-color: $color-bg-neutral;
+  }
+
+}
+
+.field-validate {
+  &[data-validations] {
+    padding-right: rem(36);
+    background-image: url(image-path("icons/glyphs/validation-todo-20x20.svg"));
+    background-repeat: no-repeat;
+    background-position: right rem(8) top rem(8);
+    &.is-valid {
+      background-image: url(image-path("icons/glyphs/validation-tick-20x20.svg"));
+    }
+    &.is-filled.is-invalid {
+      background-image: url(image-path("icons/glyphs/validation-error-20x20.svg"));
+    }
+  }
+  [data-validation-icons="false"] &[data-validations] {
+    background-image: none;
+  }
+}
+
+.control-group {
+  margin-bottom: $md;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.stacked-layout {
+  display: inline-block;
+  margin-bottom: $sm;
+  font-weight: 600;
+}
+
+.controls-inline {
+  label,
+  input,
+  .input,
+  select {
+    display: inline-block;
+    width: auto;
+  }
+  label {
+    margin-right: $sm;
+  }
+}
+
+.radio {
+  display: block;
+  float: left;
+  margin-top: rem(3);
+  margin-right: rem(8);
+  cursor: pointer;
+
+  @include on("sm") {
+    margin-top: rem(5);
+  }
+
+  & + label {
+    display: block;
+    margin-bottom: 0;
+    overflow: hidden;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
+
+
+
+.select {
+  &.smallest {
+    width: auto;
+  }
+}
+
+.control-groups-spaced-small {
+  .control-group {
+    margin-bottom: $md / 1.66;
+  }
+}
+
+.error {
+  display: block;
+  margin-top: $xs;
+  color: $color-text-alert;
+  font-size: em(14);
+}
