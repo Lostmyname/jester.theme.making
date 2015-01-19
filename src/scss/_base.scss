@@ -1,12 +1,11 @@
 @import "variables";
 
-//Base
+@import "base/form/class";
+@import "base/typography/class";
 @import "base/typography/base";
 @import "base/form/base";
 
-//Classes
-@import "base/typography/class";
 @import "base/icon/icon";
-@import "base/form/class";
+
 @import "base/list/ordered-list";
 

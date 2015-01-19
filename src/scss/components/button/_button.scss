@@ -1,17 +1,18 @@
-.button {
-  @include button($color-bg-neutral, $color-text);
-}
+ .button {
+   @include button($color-bg-neutral, $color-text);
+   text-transform: uppercase;
+ }
 
-.button.primary {
-  @include button($color-bg-primary, white);
-}
+ .button.primary {
+   @include button($color-bg-primary, white);
+ }
 
-.button.secondary {
-  @include button($color-bg-secondary, white);
+ .button.secondary {
+   @include button($color-bg-secondary, white);
 }
 
 .button.alert {
-  @include button($color-bg-alert, white);
+  @include button($color-bg-alert, black);
 }
 
 .button.inverted {

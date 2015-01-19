@@ -5,11 +5,10 @@
 }
   
 .divider-thick {
-  background-color: transparent;
-  background-image: url(../images/dividers/brush-white-thin-large.png);
+  background-color: $color-bg-white;
+  height: 5px;
 
   @include on("retina") {
-    background-image: url(../images/dividers/brush-white-thin-xlarge.png);
     background-size: auto 10px;
   }
 }
